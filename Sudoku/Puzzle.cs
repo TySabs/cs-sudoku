@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Sudoku
 {
-    enum PuzzleDifficulty { easy = 1, medium = 2, hard = 3 }
+    public enum PuzzleDifficulty { easy = 1, medium = 2, hard = 3 }
 
-    class Puzzle
+    public class Puzzle
     {
         bool IsSolved { get; set; }
         bool IsCompleted { get; set; }
