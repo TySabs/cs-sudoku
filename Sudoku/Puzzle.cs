@@ -12,7 +12,7 @@ namespace Sudoku
         public bool IsSolved { get; set; }
         public bool IsCompleted { get; set; }
         public bool IsSaved { get; set; }
-        public PuzzleDifficulty DifficultyLevel;
+        public PuzzleDifficulty? DifficultyLevel;
         public int Timer { get; set; }
         public int RecordTime { get; set; }
 
@@ -24,6 +24,16 @@ namespace Sudoku
         {
             DifficultyLevel = difLvl;
 
+            IsSolved = false;
+            IsCompleted = false;
+            IsSaved = false;
+
+            Timer = 0;
+            RecordTime = 0;
+        }
+
+        public Puzzle()
+        {
             IsSolved = false;
             IsCompleted = false;
             IsSaved = false;
