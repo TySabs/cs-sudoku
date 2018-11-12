@@ -4,6 +4,8 @@
 # build
 [Oo]bj/
 [Bb]in/
+Debug/
+v15/
 packages/
 TestResults/
 

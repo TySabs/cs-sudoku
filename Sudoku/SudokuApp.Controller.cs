@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace Sudoku
 {
-    public partial class Form1 : Form
+    public partial class SudokuApp : Form
     {
 
         private void PopulateDiffComboBox()
