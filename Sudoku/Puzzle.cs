@@ -17,5 +17,32 @@ namespace Sudoku
         public int RecordTime { get; set; }
 
         // TODO add Initial State, Saved State, and Solution State
-    }
-}
+
+
+        // Constructor
+        public Puzzle(PuzzleDifficulty difLvl)
+        {
+            DifficultyLevel = difLvl;
+
+            IsSolved = false;
+            IsCompleted = false;
+            IsSaved = false;
+
+            Timer = 0;
+            RecordTime = 0;
+        }
+
+        
+        public static double CalculateDifficultyAverage(List<Puzzle> puzzlePool)
+        {
+            int total, sum;
+            for (total = 0, sum = 0; total < puzzlePool.Count; total++)
+            {
+                sum += puzzlePool[total].RecordTime;
+            }
+
+            return sum / total;
+        }
+
+    } // end Puzzle class
+} // end Sudoku namespace

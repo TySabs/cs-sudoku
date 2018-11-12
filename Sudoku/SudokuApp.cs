@@ -21,8 +21,8 @@ namespace Sudoku
 
         private void InitFrameSize()
         {
-            int h = (int) (Screen.PrimaryScreen.WorkingArea.Height * 0.6);
-            int w = (int) (Screen.PrimaryScreen.WorkingArea.Width * 0.6);
+            int h = (int) (Screen.PrimaryScreen.WorkingArea.Height * 0.65);
+            int w = (int) (Screen.PrimaryScreen.WorkingArea.Width * 0.65);
             Size = new Size(w, h);
         }
 

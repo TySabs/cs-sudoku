@@ -18,17 +18,17 @@ namespace Sudoku
 
         public double EasyAverage
         {
-            get { return CalculateDifficultyAverage(easyPuzzles); }
+            get { return Puzzle.CalculateDifficultyAverage(easyPuzzles); }
         }
 
         public double MediumAverage
         {
-            get { return CalculateDifficultyAverage(mediumPuzzles); }
+            get { return Puzzle.CalculateDifficultyAverage(mediumPuzzles); }
         }
 
         public double HardAverage
         {
-            get { return CalculateDifficultyAverage(hardPuzzles); }
+            get { return Puzzle.CalculateDifficultyAverage(hardPuzzles); }
         }
     }
 }
