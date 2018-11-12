@@ -44,8 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Puzzle.cs" />
     <Compile Include="SudokuApp.Controller.cs">
       <DependentUpon>SudokuApp.cs</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="SudokuApp.cs">
       <SubType>Form</SubType>
@@ -55,6 +57,7 @@
     </Compile>
     <Compile Include="SudokuApp.Model.cs">
       <DependentUpon>SudokuApp.cs</DependentUpon>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -79,6 +82,21 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\Resources\puzzles\directory.txt" />
+    <Content Include="Properties\Resources\puzzles\easy\e1.txt" />
+    <Content Include="Properties\Resources\puzzles\easy\e2.txt" />
+    <Content Include="Properties\Resources\puzzles\easy\e3.txt" />
+    <Content Include="Properties\Resources\puzzles\easy\e4.txt" />
+    <Content Include="Properties\Resources\puzzles\hard\h1.txt" />
+    <Content Include="Properties\Resources\puzzles\hard\h2.txt" />
+    <Content Include="Properties\Resources\puzzles\hard\h3.txt" />
+    <Content Include="Properties\Resources\puzzles\hard\h4.txt" />
+    <Content Include="Properties\Resources\puzzles\medium\m1.txt" />
+    <Content Include="Properties\Resources\puzzles\medium\m2.txt" />
+    <Content Include="Properties\Resources\puzzles\medium\m3.txt" />
+    <Content Include="Properties\Resources\puzzles\medium\m4.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
