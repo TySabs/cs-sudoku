@@ -17,6 +17,17 @@ namespace Sudoku
             }
         }
 
+        public double CalculateDifficultyAverage(List<Puzzle> puzzlePool)
+        {
+            int total, sum;
+            for (total = 0, sum = 0; total < puzzlePool.Count; total++)
+            {
+                sum += puzzlePool[total].RecordTime;
+            }
+
+            return sum / total;
+        }
+
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             displayLabel.Text = "Here is your new puzzle on " + DifficultyBox.SelectedItem

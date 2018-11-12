@@ -5,15 +5,16 @@ using System.Text;
 
 namespace Sudoku
 {
-    public enum PuzzleDifficulty { easy = 1, medium = 2, hard = 3 }
+    public enum PuzzleDifficulty { Easy = 1, Medium = 2, Hard = 3 }
 
     public class Puzzle
     {
-        bool IsSolved { get; set; }
-        bool IsCompleted { get; set; }
-        bool IsSaved { get; set; }
-        PuzzleDifficulty DifficultyLevel;
-        int Timer { get; set; }
+        public bool IsSolved { get; set; }
+        public bool IsCompleted { get; set; }
+        public bool IsSaved { get; set; }
+        public PuzzleDifficulty DifficultyLevel;
+        public int Timer { get; set; }
+        public int RecordTime { get; set; }
 
         // TODO add Initial State, Saved State, and Solution State
     }

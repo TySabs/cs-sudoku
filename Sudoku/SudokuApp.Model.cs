@@ -10,8 +10,25 @@ namespace Sudoku
     public partial class SudokuApp : Form
     {
 
-        public static string[] difficulties = { "Easy", "Medium", "Hard" }; 
+        public static string[] difficulties = { "Easy", "Medium", "Hard" };
 
+        public static List<Puzzle> easyPuzzles = new List<Puzzle>();
+        public static List<Puzzle> mediumPuzzles = new List<Puzzle>();
+        public static List<Puzzle> hardPuzzles = new List<Puzzle>();
 
+        public double EasyAverage
+        {
+            get { return CalculateDifficultyAverage(easyPuzzles); }
+        }
+
+        public double MediumAverage
+        {
+            get { return CalculateDifficultyAverage(mediumPuzzles); }
+        }
+
+        public double HardAverage
+        {
+            get { return CalculateDifficultyAverage(hardPuzzles); }
+        }
     }
 }
