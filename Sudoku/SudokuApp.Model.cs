@@ -16,6 +16,8 @@ namespace Sudoku
         public static List<Puzzle> mediumPuzzles = new List<Puzzle>();
         public static List<Puzzle> hardPuzzles = new List<Puzzle>();
 
+        public static TextBox[,] PuzzleData = new TextBox[9,9];
+
         public double EasyAverage
         {
             get { return Puzzle.CalculateDifficultyAverage(easyPuzzles); }

@@ -17,8 +17,17 @@ namespace Sudoku
             PopulateDiffComboBox();
             InitFrameSize();
             CenterToScreen();
+            PopulateRows();
 
             Puzzle p = new Puzzle("../../Properties/Resources/puzzles/easy/e1.txt");
+
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    PuzzleData[i, j].Text = p.InitialState[i, j].ToString();
+                }
+            }
         }
 
         private void InitFrameSize()
