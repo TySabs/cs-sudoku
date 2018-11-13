@@ -2,7 +2,7 @@
 
 Goals:
 1. Pull up an unsolved puzzle
-2. From a selection of varying difficulities...
+2. From a selection of varying difficulties...
 3. The ability for us to save our current progress, to be resumed later...
 4. With a mechanism to track our progress with solving puzzles within a single difficulty...
 5. A button to "cheat" or "help" with finding the solution...
@@ -10,13 +10,26 @@ Goals:
 7. A "pause" button...
 8. And of course, as with most things, a reset button.
 
+## Puzzle grid
+|     |*A*|*B*|*C*|*D*|*E*|*F*|*G*|*H*|
+|-----|---|---|---|---|---|---|---|---|
+|**1**| 1A| 1B| 1C| 1D| 1E| 1F| 1G| 1H|
+|**2**| 2A| 2B| 2C| 2D| 2E| 2F| 2G| 2H|
+|**3**| 3A| 3B| 3C| 3D| 3E| 3F| 3G| 3H|
+|**4**| 4A| 4B| 4C| 4D| 4E| 4F| 4G| 4H|
+|**5**| 5A| 5B| 5C| 5D| 5E| 5F| 5G| 5H|
+|**6**| 6A| 6B| 6C| 6D| 6E| 6F| 6G| 6H|
+|**7**| 7A| 7B| 7C| 7D| 7E| 7F| 7G| 7H|
+|**8**| 8A| 8B| 8C| 8D| 8E| 8F| 8G| 8H|
+|**9**| 9A| 9B| 9C| 9D| 9E| 9F| 9G| 9H|
+
 ## Pulling up a new puzzle
 We're going to have text files setup that will serve as our "database" of available puzzles,
 with two layers of organization: first by difficulty, then by completed followed by uncompleted puzzles within those difficulties.
 
 Once the user has indicated they would like to select a new puzzle of a specific difficulty, your task will be to fetch either the first saved puzzle they have or an unsolved puzzle. If you arrange your puzzles as [Completed], [Completed], [Saved], [Saved], [Unsolved], you only need to iterate from 0 to (n - 1) until you find either or. This should have the effect of taking the contents of the (either saved or unsolved puzzle) and populating them into our Form. At which time, our timer should either resume from the saved time or begin from 0:00.
 
-Here is a zip file of [sample puzzles], including their solutions. You'll want to open the directory.txt file, which contains the names of the other files to be opened. Using ReadLine, you'll open each file, collect the input values, and if when the user action dictates it, save an in-progress puzzle, or record the time for that puzzle's solution.
+Here is a zip file of [sample puzzles], including their solutions. You'll want to open the directory.txt file, which contains the names of the other files to be opened. Using `ReadLine`, you'll open each file, collect the input values, and if when the user action dictates it, save an in-progress puzzle, or record the time for that puzzle's solution.
 
 ## Varying Difficulties
 I would like to insist on the one-step process for this project, whereby choosing one of the difficulties pulls up a new puzzle.
