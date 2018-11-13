@@ -1,38 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 
 namespace Sudoku
 {
-    public enum PuzzleDifficulty { Easy = 1, Medium = 2, Hard = 3 }
-
     public class Puzzle
     {
         public bool IsSolved { get; set; }
         public bool IsCompleted { get; set; }
         public bool IsSaved { get; set; }
-        public PuzzleDifficulty? DifficultyLevel;
         public int Timer { get; set; }
         public int RecordTime { get; set; }
-
-        // TODO add Initial State, Saved State, and Solution State
-
+        public char[,] InitialState;
+        public char[,] SolutionState;
+        public char[,] SavedState;
 
         // Constructor
-        public Puzzle(PuzzleDifficulty difLvl)
-        {
-            DifficultyLevel = difLvl;
-
-            IsSolved = false;
-            IsCompleted = false;
-            IsSaved = false;
-
-            Timer = 0;
-            RecordTime = 0;
-        }
-
-        public Puzzle()
+        public Puzzle(string filePath)
         {
             IsSolved = false;
             IsCompleted = false;
@@ -40,8 +26,25 @@ namespace Sudoku
 
             Timer = 0;
             RecordTime = 0;
-        }
 
+            using (StreamReader inFile = new StreamReader(filePath))
+            {
+                string buffer;
+                buffer = inFile.ReadLine();
+                InitialState = new char[9, 9];
+                for (int i = 0; i < 9; i++)
+                {
+                    for (int j = 0; j < 9; j++)
+                    {
+                        InitialState[i, j] = buffer[j];
+                    } // end inner for-loop
+
+                    buffer = inFile.ReadLine();
+                } // end outer for-loop
+
+                PrintPuzzleState(InitialState);
+            }
+        } // end Constructor
         
         public static double CalculateDifficultyAverage(List<Puzzle> puzzlePool)
         {
@@ -54,5 +57,17 @@ namespace Sudoku
             return sum / total;
         }
 
+        public void PrintPuzzleState(char[,] state)
+        {
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    Console.Write(state[i, j]);
+                }
+
+                Console.WriteLine();
+            }
+        }
     } // end Puzzle class
 } // end Sudoku namespace

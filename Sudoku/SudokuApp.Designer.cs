@@ -1008,6 +1008,7 @@
             this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "SudokuApp";
             this.Text = "Sudoku - Josh Ruge / Tyler Saballus";
+            this.Load += new System.EventHandler(this.SudokuApp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

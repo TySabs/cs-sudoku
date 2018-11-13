@@ -17,6 +17,8 @@ namespace Sudoku
             PopulateDiffComboBox();
             InitFrameSize();
             CenterToScreen();
+
+            Puzzle p = new Puzzle("../../Properties/Resources/puzzles/easy/e1.txt");
         }
 
         private void InitFrameSize()
@@ -26,5 +28,9 @@ namespace Sudoku
             Size = new Size(w, h);
         }
 
+        private void SudokuApp_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
