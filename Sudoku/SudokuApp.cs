@@ -25,7 +25,7 @@ namespace Sudoku
             {
                 for (int j = 0; j < 9; j++)
                 {
-                    PuzzleData[i, j].Text = p.InitialState[i, j].ToString();
+                    PuzzleBoxes[i, j].Text = p.InitialState[i, j].ToString();
                 }
             }
         }

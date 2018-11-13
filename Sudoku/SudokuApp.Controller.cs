@@ -19,7 +19,7 @@ namespace Sudoku
 
         private void PopulateRows()
         {
-            PuzzleData = new TextBox[9, 9]
+            PuzzleBoxes = new TextBox[9, 9]
             {
                 { Box1A, Box1B, Box1C, Box1D, Box1E, Box1F, Box1G, Box1H, Box1J },
                 { Box2A, Box2B, Box2C, Box2D, Box2E, Box2F, Box2G, Box2H, Box2J },
