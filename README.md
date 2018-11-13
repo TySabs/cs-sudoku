@@ -8,7 +8,7 @@ Goals:
 5. A button to "cheat" or "help" with finding the solution... ❌
 6. Another button to verify the correctness (or lack thereof) of our current solution... ❌
 7. A "pause" button... ❌
-8. And of course, as with most things, a reset button. X
+8. And of course, as with most things, a reset button.  ❌
 
 ## Pulling up a new puzzle
 We're going to have text files setup that will serve as our "database" of available puzzles,
