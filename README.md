@@ -76,4 +76,4 @@ While on the subject of colors and appearances: make sure the values from the in
 
 
 
-[sample puzzles] https://github.com/joshruge89/Assign5/tree/master/Sudoku/Properties/Resources/puzzles
+[sample puzzles]: https://github.com/joshruge89/Assign5/tree/master/Sudoku/Properties/Resources/puzzles
