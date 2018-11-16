@@ -17,18 +17,11 @@ namespace Sudoku
             PopulateDiffComboBox();
             InitFrameSize();
             CenterToScreen();
-            PopulateRows();
-
+            PopulateGrid();
             InitPuzzleLists();
-            Puzzle p = easyPuzzles[1];
 
-            for (int i = 0; i < 9; i++)
-            {
-                for (int j = 0; j < 9; j++)
-                {
-                    PuzzleBoxes[i, j].Text = p.InitialState[i, j].ToString();
-                }
-            }
+            Puzzle p = easyPuzzles[0];
+            FillGrid(p);
         }
 
         private void InitFrameSize()
@@ -36,11 +29,6 @@ namespace Sudoku
             int h = (int) (Screen.PrimaryScreen.WorkingArea.Height * 0.65);
             int w = (int) (Screen.PrimaryScreen.WorkingArea.Width * 0.65);
             Size = new Size(w, h);
-        }
-
-        private void SudokuApp_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

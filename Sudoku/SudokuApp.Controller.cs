@@ -8,11 +8,52 @@ namespace Sudoku
 {
     public partial class SudokuApp : Form
     {
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        private void DifficultyBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            displayLabel.Text = "Here is your new puzzle on " + DifficultyBox.SelectedItem
-             + " difficulty!";
-        }
+
+            List<Puzzle> selectedList;
+            switch (DifficultyBox.SelectedItem)
+            {
+                case "Easy":
+                    selectedList = easyPuzzles;
+                    break;
+                case "Medium":
+                    selectedList = mediumPuzzles;
+                    break;
+                case "Hard":
+                    selectedList = hardPuzzles;
+                    break;
+                default:
+                    displayLabel.Text = "Combo Box Error!";
+                    return;
+            }
+
+            int puzzleCounter = 1;
+            foreach (Puzzle p in selectedList)
+            {
+                if (!p.IsCompleted)
+                {
+                    FillGrid(p);
+                    break;
+                }
+                puzzleCounter++;
+            }
+
+
+            displayLabel.Text = DifficultyBox.SelectedItem + " Difficulty - Puzzle Number: " + puzzleCounter;
+
+        } // end DifficultyBox_SelectedIndexChanged function
+
+        private void FillGrid(Puzzle selectedPuzzle)
+        {
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    PuzzleBoxes[i, j].Text = selectedPuzzle.InitialState[i, j].ToString();
+                }
+            }
+        } // end FillGrid function
 
 
     } // end SodukoApp.Controller class

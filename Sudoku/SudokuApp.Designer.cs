@@ -791,7 +791,7 @@
             this.DifficultyBox.Name = "DifficultyBox";
             this.DifficultyBox.Size = new System.Drawing.Size(153, 37);
             this.DifficultyBox.TabIndex = 82;
-            this.DifficultyBox.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.DifficultyBox.SelectedIndexChanged += new System.EventHandler(this.DifficultyBox_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -1008,7 +1008,6 @@
             this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "SudokuApp";
             this.Text = "Sudoku - Josh Ruge / Tyler Saballus";
-            this.Load += new System.EventHandler(this.SudokuApp_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

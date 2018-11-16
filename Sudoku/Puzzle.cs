@@ -42,10 +42,6 @@ namespace Sudoku
                     buffer = inFile.ReadLine();
                 } // end outer for-loop
 
-                Console.WriteLine("Initial State");
-                PrintPuzzleState(InitialState);
-                Console.WriteLine();
-
                 buffer = inFile.ReadLine();
                 SolutionState = new char[9, 9];
                 for (int i = 0; i < 9; i++)
@@ -57,10 +53,6 @@ namespace Sudoku
 
                     buffer = inFile.ReadLine();
                 } // end outer for-loop
-
-                Console.WriteLine("Solution State");
-                PrintPuzzleState(SolutionState);
-                Console.WriteLine();
             }
         } // end Constructor
         

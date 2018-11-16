@@ -42,7 +42,7 @@ namespace Sudoku
             }
         }
 
-        private void PopulateRows()
+        private void PopulateGrid()
         {
             PuzzleBoxes = new TextBox[9, 9]
             {
