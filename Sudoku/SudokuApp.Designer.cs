@@ -844,6 +844,7 @@
             this.SaveButton.TabIndex = 88;
             this.SaveButton.Text = "Save Game";
             this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // ResetButton
             // 
@@ -854,6 +855,7 @@
             this.ResetButton.TabIndex = 89;
             this.ResetButton.Text = "Reset Game";
             this.ResetButton.UseVisualStyleBackColor = true;
+            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
             // HelpButton
             // 

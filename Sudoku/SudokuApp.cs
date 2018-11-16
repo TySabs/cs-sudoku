@@ -32,5 +32,6 @@ namespace Sudoku
             int w = (int) (Screen.PrimaryScreen.WorkingArea.Width * 0.65);
             Size = new Size(w, h);
         }
+
     }
 }

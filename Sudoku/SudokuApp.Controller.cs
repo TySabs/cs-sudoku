@@ -8,6 +8,11 @@ namespace Sudoku
 {
     public partial class SudokuApp : Form
     {
+        /**********************************************************************************
+        * 
+        *  Form Functions
+        * 
+        * *********************************************************************************/
         private void DifficultyBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Save old selected puzzle
@@ -47,6 +52,24 @@ namespace Sudoku
 
         } // end DifficultyBox_SelectedIndexChanged function
 
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            SelectedPuzzle.SetSaveState(PuzzleBoxes);
+        }
+
+
+        private void ResetButton_Click(object sender, EventArgs e)
+        {
+            SelectedPuzzle.IsSaved = false;
+            FillGrid(SelectedPuzzle);
+        }
+
+        /**********************************************************************************
+         * 
+         *  Helper Functions
+         * 
+         * *********************************************************************************/
         private void FillGrid(Puzzle selectedPuzzle)
         {
             for (int i = 0; i < 9; i++)
@@ -68,7 +91,6 @@ namespace Sudoku
 
             }
         } // end FillGrid function
-
 
     } // end SodukoApp.Controller class
 } // end Sudoku namespace
