@@ -19,7 +19,8 @@ namespace Sudoku
             CenterToScreen();
             PopulateRows();
 
-            Puzzle p = new Puzzle("../../Properties/Resources/puzzles/easy/e1.txt");
+            InitPuzzleLists();
+            Puzzle p = easyPuzzles[1];
 
             for (int i = 0; i < 9; i++)
             {
