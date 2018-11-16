@@ -22,6 +22,8 @@ namespace Sudoku
 
             Puzzle p = easyPuzzles[0];
             FillGrid(p);
+            SelectedPuzzle = p;
+
         }
 
         private void InitFrameSize()

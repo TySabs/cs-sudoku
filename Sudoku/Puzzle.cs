@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Sudoku
 {
@@ -78,6 +79,20 @@ namespace Sudoku
 
                 Console.WriteLine();
             }
+        }
+
+        public void SetSaveState(TextBox[,] currentState)
+        {
+            IsSaved = true;
+            SavedState = new char[9, 9];
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    SavedState[i, j] = currentState[i, j].Text[0];
+                } // end inner for-loop
+
+            } // end outer for-loop
         }
     } // end Puzzle class
 } // end Sudoku namespace

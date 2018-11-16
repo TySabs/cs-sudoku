@@ -11,10 +11,13 @@ namespace Sudoku
     {
 
         public static string[] difficulties = { "Easy", "Medium", "Hard" };
+        public static string SelectedDifficulty { get; set; }
+        public static Puzzle SelectedPuzzle { get; set; }
 
         public static List<Puzzle> easyPuzzles = new List<Puzzle>();
         public static List<Puzzle> mediumPuzzles = new List<Puzzle>();
         public static List<Puzzle> hardPuzzles = new List<Puzzle>();
+
 
         public static TextBox[,] PuzzleBoxes = new TextBox[9,9];
 

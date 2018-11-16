@@ -10,6 +10,8 @@ namespace Sudoku
     {
         private void DifficultyBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // Save old selected puzzle
+           SelectedPuzzle.SetSaveState(PuzzleBoxes);
 
             List<Puzzle> selectedList;
             switch (DifficultyBox.SelectedItem)
@@ -34,6 +36,7 @@ namespace Sudoku
                 if (!p.IsCompleted)
                 {
                     FillGrid(p);
+                    SelectedPuzzle = p;
                     break;
                 }
                 puzzleCounter++;
@@ -48,10 +51,21 @@ namespace Sudoku
         {
             for (int i = 0; i < 9; i++)
             {
-                for (int j = 0; j < 9; j++)
+                if (selectedPuzzle.IsSaved)
                 {
-                    PuzzleBoxes[i, j].Text = selectedPuzzle.InitialState[i, j].ToString();
+                    for (int j = 0; j < 9; j++)
+                    {
+                        PuzzleBoxes[i, j].Text = selectedPuzzle.SavedState[i, j].ToString();
+                    }
                 }
+                else
+                {
+                    for (int j = 0; j < 9; j++)
+                    {
+                        PuzzleBoxes[i, j].Text = selectedPuzzle.InitialState[i, j].ToString();
+                    }
+                }
+
             }
         } // end FillGrid function
 
