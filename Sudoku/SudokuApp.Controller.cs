@@ -119,6 +119,11 @@ namespace Sudoku
 
         private void CheckSolutionButton_Click(object sender, EventArgs e)
         {
+            if (SelectedPuzzle == null)
+            {
+                return;
+            }
+
             SelectedPuzzle.IsCompleted = CheckSolution();
 
             if (SelectedPuzzle.IsCompleted)
@@ -199,6 +204,11 @@ namespace Sudoku
 
         private bool CheckSolution()
         {
+            if (SelectedPuzzle == null)
+            {
+                return false;
+            }
+
             int numCorrect = 0;
             for (int i = 0; i < 9; i++)
             {
@@ -225,24 +235,67 @@ namespace Sudoku
         private void SetAverageSolutionTime()
         {
             StringBuilder sb = new StringBuilder("Average Solution Time: ");
-
+            int amount = 0, recordTime = 0;
             switch (DifficultyBox.SelectedItem)
             {
                 case "Easy":
                     sb.Append(EasyAverage.ToString("T"));
+
+                    amount = GetCompletedAmount(easyPuzzles);
+                    recordTime = GetRecordTime(easyPuzzles);
                     break;
                 case "Medium":
                     sb.Append(MediumAverage.ToString("T"));
+
+                    amount = GetCompletedAmount(mediumPuzzles);
+                    recordTime = GetRecordTime(mediumPuzzles);
                     break;
                 case "Hard":
                     sb.Append(HardAverage.ToString("T"));
+
+                    amount = GetCompletedAmount(hardPuzzles);
+                    recordTime = GetRecordTime(hardPuzzles);
                     break;
                 default:
                     sb.Append("\t Set Average Error!");
                     break;
             }
 
+            TimeSpan formattedRecord = TimeSpan.FromSeconds(recordTime);
+            sb.Append(" || Total Completed: " + amount);
+            sb.Append(" || Record Time: " + formattedRecord.ToString("T"));
+
             AvgLabel.Text = sb.ToString();
+        } // end SetAverageSolutionTime function
+
+        private int GetCompletedAmount(List<Puzzle> puzzleList)
+        {
+            int amount = 0;
+
+            foreach (Puzzle p in puzzleList)
+            {
+                if (p.IsCompleted)
+                {
+                    amount++;
+                }
+            }
+
+            return amount;
+        } // end GetCompletedAmount method
+
+
+        private int GetRecordTime(List<Puzzle> puzzleList)
+        {
+            int recordTime = Int32.MaxValue;
+            foreach (Puzzle p in puzzleList)
+            {
+                if (p.IsCompleted && p.RecordTime < recordTime)
+                {
+                    recordTime = p.RecordTime;
+                }
+            }
+
+            return (recordTime == Int32.MaxValue) ? 0 : recordTime;      
         }
 
     } // end SodukoApp.Controller class

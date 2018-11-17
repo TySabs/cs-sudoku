@@ -1107,7 +1107,7 @@ namespace Sudoku
             // 
             this.AvgLabel.AutoSize = true;
             this.AvgLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.AvgLabel.Location = new System.Drawing.Point(1345, 206);
+            this.AvgLabel.Location = new System.Drawing.Point(1205, 192);
             this.AvgLabel.Name = "AvgLabel";
             this.AvgLabel.Size = new System.Drawing.Size(0, 36);
             this.AvgLabel.TabIndex = 96;
