@@ -5,6 +5,18 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+/************************************************************
+ *                                                          *
+ *  CSCI 473/504           Assignment 5         Fall 2018   *                                             
+ *                                                          *
+ *  Programmers: Tyler Saballus                             *
+ *                                                          *
+ *  Date Due:   Nov-15 (Turned in one day late)             *                          
+ *                                                          *
+ *  Purpose:    This is a Sudoku app that allows users to   *
+ *              play the popular Sudoku game.               *
+ ***********************************************************/
+
 namespace Sudoku
 {
     public partial class SudokuApp : Form
@@ -16,22 +28,18 @@ namespace Sudoku
         * *********************************************************************************/
         private void DifficultyBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            WinLabel.Text = "";
             // Save old selected puzzle
-            List<Puzzle> selectedList;
-            string averageSolutionTime;
             switch (DifficultyBox.SelectedItem)
             {
                 case "Easy":
-                    selectedList = easyPuzzles;
-                    averageSolutionTime = EasyAverage.ToString("T");
+                    SelectedList = easyPuzzles;
                     break;
                 case "Medium":
-                    selectedList = mediumPuzzles;
-                    averageSolutionTime = MediumAverage.ToString("T");
+                    SelectedList = mediumPuzzles;
                     break;
                 case "Hard":
-                    selectedList = hardPuzzles;
-                    averageSolutionTime = HardAverage.ToString("T");
+                    SelectedList = hardPuzzles;
                     break;
                 default:
                     DifficultyLabel.Text = "Combo Box Error!";
@@ -39,7 +47,7 @@ namespace Sudoku
             }
 
             int puzzleCounter = 1;
-            foreach (Puzzle p in selectedList)
+            foreach (Puzzle p in SelectedList)
             {
                 if (!p.IsCompleted)
                 {
@@ -57,7 +65,8 @@ namespace Sudoku
             sb.Append(DifficultyBox.SelectedItem + " Difficulty - ");
             sb.Append("Puzzle Number: " + puzzleCounter);
             DifficultyLabel.Text = sb.ToString();
-            AvgLabel.Text = "Average Solution Time: " + averageSolutionTime;
+
+            SetAverageSolutionTime();
 
         } // end DifficultyBox_SelectedIndexChanged function
 
@@ -66,6 +75,7 @@ namespace Sudoku
             TextBox currentBox = sender as TextBox;
             currentBox.BackColor = Color.White;
             currentBox.ForeColor = Color.Black;
+            currentBox.SelectionStart = currentBox.Text.Length;
         }
 
         private void AnyTextBox_KeyUp(object sender, EventArgs e)
@@ -109,7 +119,20 @@ namespace Sudoku
 
         private void CheckSolutionButton_Click(object sender, EventArgs e)
         {
-            CheckSolution();
+            SelectedPuzzle.IsCompleted = CheckSolution();
+
+            if (SelectedPuzzle.IsCompleted)
+            {
+                PuzzleTimer.Enabled = false;
+                string winMsg = "Congratulations! You have completed the puzzle at time: " + TimerLabel.Text;
+                SelectedPuzzle.RecordTime = SelectedPuzzle.Timer;
+
+                TimerLabel.Text = "";
+                WinLabel.Text = winMsg;
+
+                SetAverageSolutionTime();
+            }
+
         }
 
         private void PauseButton_Click(object sender, EventArgs e)
@@ -198,6 +221,29 @@ namespace Sudoku
             bool solveCheck = numCorrect == 81;
             return solveCheck;
         } // end CheckSolution function
+
+        private void SetAverageSolutionTime()
+        {
+            StringBuilder sb = new StringBuilder("Average Solution Time: ");
+
+            switch (DifficultyBox.SelectedItem)
+            {
+                case "Easy":
+                    sb.Append(EasyAverage.ToString("T"));
+                    break;
+                case "Medium":
+                    sb.Append(MediumAverage.ToString("T"));
+                    break;
+                case "Hard":
+                    sb.Append(HardAverage.ToString("T"));
+                    break;
+                default:
+                    sb.Append("\t Set Average Error!");
+                    break;
+            }
+
+            AvgLabel.Text = sb.ToString();
+        }
 
     } // end SodukoApp.Controller class
 } // end Sudoku namespace

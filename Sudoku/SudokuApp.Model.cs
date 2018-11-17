@@ -4,6 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+/************************************************************
+ *                                                          *
+ *  CSCI 473/504           Assignment 5         Fall 2018   *                                             
+ *                                                          *
+ *  Programmers: Tyler Saballus                             *
+ *                                                          *
+ *  Date Due:   Nov-15 (Turned in one day late)             *                          
+ *                                                          *
+ *  Purpose:    This is a Sudoku app that allows users to   *
+ *              play the popular Sudoku game.               *
+ ***********************************************************/
+
 namespace Sudoku
 {
 
@@ -13,6 +25,7 @@ namespace Sudoku
         public static string[] difficulties = { "Easy", "Medium", "Hard" };
         public static string SelectedDifficulty { get; set; }
         public static Puzzle SelectedPuzzle { get; set; }
+        public static List<Puzzle> SelectedList;
 
         public static List<Puzzle> easyPuzzles = new List<Puzzle>();
         public static List<Puzzle> mediumPuzzles = new List<Puzzle>();

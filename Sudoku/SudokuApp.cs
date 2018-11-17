@@ -7,6 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+/************************************************************
+ *                                                          *
+ *  CSCI 473/504           Assignment 5         Fall 2018   *                                             
+ *                                                          *
+ *  Programmers: Tyler Saballus                             *
+ *                                                          *
+ *  Date Due:   Nov-15 (Turned in one day late)             *                          
+ *                                                          *
+ *  Purpose:    This is a Sudoku app that allows users to   *
+ *              play the popular Sudoku game.               *
+ ***********************************************************/
+
 namespace Sudoku
 {
     public partial class SudokuApp : Form
@@ -18,7 +30,7 @@ namespace Sudoku
             InitFrameSize();
             CenterToScreen();
             InitPuzzleLists();
-            InitGrid();
+            PopulateGrid();
         }
 
         private void InitFrameSize()
@@ -53,7 +65,6 @@ namespace Sudoku
 
         private void InitGrid()
         {
-            PopulateGrid();
             Puzzle p = easyPuzzles[0];
             SelectedPuzzle = p;
             FillGrid();

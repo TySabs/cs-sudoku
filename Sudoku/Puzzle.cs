@@ -5,6 +5,18 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+/************************************************************
+ *                                                          *
+ *  CSCI 473/504           Assignment 5         Fall 2018   *                                             
+ *                                                          *
+ *  Programmers: Tyler Saballus                             *
+ *                                                          *
+ *  Date Due:   Nov-15 (Turned in one day late)             *                          
+ *                                                          *
+ *  Purpose:    This is a Sudoku app that allows users to   *
+ *              play the popular Sudoku game.               *
+ ***********************************************************/
+
 namespace Sudoku
 {
     public class Puzzle
@@ -59,14 +71,26 @@ namespace Sudoku
         
         public static TimeSpan CalculateDifficultyAverage(List<Puzzle> puzzlePool)
         {
-            int total, sum;
-            for (total = 0, sum = 0; total < puzzlePool.Count; total++)
+            int total, sum, i;
+            for (i = 0, total = 0, sum = 0; i < puzzlePool.Count; i++)
             {
-                sum += puzzlePool[total].RecordTime;
+                if (puzzlePool[i].IsCompleted)
+                {
+                    sum += puzzlePool[total].RecordTime;
+                    total++;
+                }
             }
 
-            return TimeSpan.FromSeconds(sum / total);
-        }
+            if (total == 0)
+            {
+                return TimeSpan.FromSeconds(0);
+            }
+            else
+            {
+                return TimeSpan.FromSeconds(sum / total);
+            }
+
+        } // end Puzzle.CalculateDifficultyAverage method
 
         public void PrintPuzzleState(char[,] state)
         {
