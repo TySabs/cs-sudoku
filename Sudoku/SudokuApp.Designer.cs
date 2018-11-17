@@ -148,6 +148,8 @@ namespace Sudoku
             this.Box1A.Name = "Box1A";
             this.Box1A.Size = new System.Drawing.Size(51, 35);
             this.Box1A.TabIndex = 0;
+            this.Box1A.Click += AnyTextBox_Click;
+            this.Box1A.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box1C
             // 
@@ -156,6 +158,8 @@ namespace Sudoku
             this.Box1C.Name = "Box1C";
             this.Box1C.Size = new System.Drawing.Size(51, 35);
             this.Box1C.TabIndex = 1;
+            this.Box1C.Click += AnyTextBox_Click;
+            this.Box1C.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box1B
             // 
@@ -164,6 +168,8 @@ namespace Sudoku
             this.Box1B.Name = "Box1B";
             this.Box1B.Size = new System.Drawing.Size(51, 35);
             this.Box1B.TabIndex = 2;
+            this.Box1B.Click += AnyTextBox_Click;
+            this.Box1B.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box3B
             // 
@@ -172,6 +178,8 @@ namespace Sudoku
             this.Box3B.Name = "Box3B";
             this.Box3B.Size = new System.Drawing.Size(51, 35);
             this.Box3B.TabIndex = 5;
+            this.Box3B.Click += AnyTextBox_Click;
+            this.Box3B.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box3C
             // 
@@ -180,6 +188,8 @@ namespace Sudoku
             this.Box3C.Name = "Box3C";
             this.Box3C.Size = new System.Drawing.Size(51, 35);
             this.Box3C.TabIndex = 4;
+            this.Box3C.Click += AnyTextBox_Click;
+            this.Box3C.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box3A
             // 
@@ -188,6 +198,8 @@ namespace Sudoku
             this.Box3A.Name = "Box3A";
             this.Box3A.Size = new System.Drawing.Size(51, 35);
             this.Box3A.TabIndex = 3;
+            this.Box3A.Click += AnyTextBox_Click;
+            this.Box3A.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box2B
             // 
@@ -196,6 +208,8 @@ namespace Sudoku
             this.Box2B.Name = "Box2B";
             this.Box2B.Size = new System.Drawing.Size(51, 35);
             this.Box2B.TabIndex = 8;
+            this.Box2B.Click += AnyTextBox_Click;
+            this.Box2B.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box2C
             // 
@@ -204,6 +218,8 @@ namespace Sudoku
             this.Box2C.Name = "Box2C";
             this.Box2C.Size = new System.Drawing.Size(51, 35);
             this.Box2C.TabIndex = 7;
+            this.Box2C.Click += AnyTextBox_Click;
+            this.Box2C.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box2A
             // 
@@ -212,6 +228,8 @@ namespace Sudoku
             this.Box2A.Name = "Box2A";
             this.Box2A.Size = new System.Drawing.Size(51, 35);
             this.Box2A.TabIndex = 6;
+            this.Box2A.Click += AnyTextBox_Click;
+            this.Box2A.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box2E
             // 
@@ -220,6 +238,8 @@ namespace Sudoku
             this.Box2E.Name = "Box2E";
             this.Box2E.Size = new System.Drawing.Size(51, 35);
             this.Box2E.TabIndex = 17;
+            this.Box2E.Click += AnyTextBox_Click;
+            this.Box2E.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box2F
             // 
@@ -228,6 +248,8 @@ namespace Sudoku
             this.Box2F.Name = "Box2F";
             this.Box2F.Size = new System.Drawing.Size(51, 35);
             this.Box2F.TabIndex = 16;
+            this.Box2F.Click += AnyTextBox_Click;
+            this.Box2F.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box2D
             // 
@@ -236,6 +258,8 @@ namespace Sudoku
             this.Box2D.Name = "Box2D";
             this.Box2D.Size = new System.Drawing.Size(51, 35);
             this.Box2D.TabIndex = 15;
+            this.Box2D.Click += AnyTextBox_Click;
+            this.Box2D.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box3E
             // 
@@ -244,6 +268,8 @@ namespace Sudoku
             this.Box3E.Name = "Box3E";
             this.Box3E.Size = new System.Drawing.Size(51, 35);
             this.Box3E.TabIndex = 14;
+            this.Box3E.Click += AnyTextBox_Click;
+            this.Box3E.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box3F
             // 
@@ -252,6 +278,8 @@ namespace Sudoku
             this.Box3F.Name = "Box3F";
             this.Box3F.Size = new System.Drawing.Size(51, 35);
             this.Box3F.TabIndex = 13;
+            this.Box3F.Click += AnyTextBox_Click;
+            this.Box3F.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box3D
             // 
@@ -260,6 +288,8 @@ namespace Sudoku
             this.Box3D.Name = "Box3D";
             this.Box3D.Size = new System.Drawing.Size(51, 35);
             this.Box3D.TabIndex = 12;
+            this.Box3D.Click += AnyTextBox_Click;
+            this.Box3D.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box1E
             // 
@@ -268,6 +298,8 @@ namespace Sudoku
             this.Box1E.Name = "Box1E";
             this.Box1E.Size = new System.Drawing.Size(51, 35);
             this.Box1E.TabIndex = 11;
+            this.Box1E.Click += AnyTextBox_Click;
+            this.Box1E.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box1F
             // 
@@ -276,6 +308,8 @@ namespace Sudoku
             this.Box1F.Name = "Box1F";
             this.Box1F.Size = new System.Drawing.Size(51, 35);
             this.Box1F.TabIndex = 10;
+            this.Box1F.Click += AnyTextBox_Click;
+            this.Box1F.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box1D
             // 
@@ -284,6 +318,8 @@ namespace Sudoku
             this.Box1D.Name = "Box1D";
             this.Box1D.Size = new System.Drawing.Size(51, 35);
             this.Box1D.TabIndex = 9;
+            this.Box1D.Click += AnyTextBox_Click;
+            this.Box1D.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box2H
             // 
@@ -292,6 +328,8 @@ namespace Sudoku
             this.Box2H.Name = "Box2H";
             this.Box2H.Size = new System.Drawing.Size(51, 35);
             this.Box2H.TabIndex = 26;
+            this.Box2H.Click += AnyTextBox_Click;
+            this.Box2H.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box2J
             // 
@@ -300,6 +338,8 @@ namespace Sudoku
             this.Box2J.Name = "Box2J";
             this.Box2J.Size = new System.Drawing.Size(51, 35);
             this.Box2J.TabIndex = 25;
+            this.Box2J.Click += AnyTextBox_Click;
+            this.Box2J.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box2G
             // 
@@ -308,6 +348,8 @@ namespace Sudoku
             this.Box2G.Name = "Box2G";
             this.Box2G.Size = new System.Drawing.Size(51, 35);
             this.Box2G.TabIndex = 24;
+            this.Box2G.Click += AnyTextBox_Click;
+            this.Box2G.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box3H
             // 
@@ -316,6 +358,8 @@ namespace Sudoku
             this.Box3H.Name = "Box3H";
             this.Box3H.Size = new System.Drawing.Size(51, 35);
             this.Box3H.TabIndex = 23;
+            this.Box3H.Click += AnyTextBox_Click;
+            this.Box3H.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box3J
             // 
@@ -324,6 +368,8 @@ namespace Sudoku
             this.Box3J.Name = "Box3J";
             this.Box3J.Size = new System.Drawing.Size(51, 35);
             this.Box3J.TabIndex = 22;
+            this.Box3J.Click += AnyTextBox_Click;
+            this.Box3J.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box3G
             // 
@@ -332,6 +378,8 @@ namespace Sudoku
             this.Box3G.Name = "Box3G";
             this.Box3G.Size = new System.Drawing.Size(51, 35);
             this.Box3G.TabIndex = 21;
+            this.Box3G.Click += AnyTextBox_Click;
+            this.Box3G.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box1H
             // 
@@ -340,6 +388,8 @@ namespace Sudoku
             this.Box1H.Name = "Box1H";
             this.Box1H.Size = new System.Drawing.Size(51, 35);
             this.Box1H.TabIndex = 20;
+            this.Box1H.Click += AnyTextBox_Click;
+            this.Box1H.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box1J
             // 
@@ -348,6 +398,8 @@ namespace Sudoku
             this.Box1J.Name = "Box1J";
             this.Box1J.Size = new System.Drawing.Size(51, 35);
             this.Box1J.TabIndex = 19;
+            this.Box1J.Click += AnyTextBox_Click;
+            this.Box1J.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box1G
             // 
@@ -356,6 +408,8 @@ namespace Sudoku
             this.Box1G.Name = "Box1G";
             this.Box1G.Size = new System.Drawing.Size(51, 35);
             this.Box1G.TabIndex = 18;
+            this.Box1G.Click += AnyTextBox_Click;
+            this.Box1G.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box8H
             // 
@@ -364,6 +418,8 @@ namespace Sudoku
             this.Box8H.Name = "Box8H";
             this.Box8H.Size = new System.Drawing.Size(51, 35);
             this.Box8H.TabIndex = 53;
+            this.Box8H.Click += AnyTextBox_Click;
+            this.Box8H.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box8J
             // 
@@ -372,6 +428,8 @@ namespace Sudoku
             this.Box8J.Name = "Box8J";
             this.Box8J.Size = new System.Drawing.Size(51, 35);
             this.Box8J.TabIndex = 52;
+            this.Box8J.Click += AnyTextBox_Click;
+            this.Box8J.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box8G
             // 
@@ -380,6 +438,8 @@ namespace Sudoku
             this.Box8G.Name = "Box8G";
             this.Box8G.Size = new System.Drawing.Size(51, 35);
             this.Box8G.TabIndex = 51;
+            this.Box8G.Click += AnyTextBox_Click;
+            this.Box8G.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box9H
             // 
@@ -388,6 +448,8 @@ namespace Sudoku
             this.Box9H.Name = "Box9H";
             this.Box9H.Size = new System.Drawing.Size(51, 35);
             this.Box9H.TabIndex = 50;
+            this.Box9H.Click += AnyTextBox_Click;
+            this.Box9H.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box9J
             // 
@@ -396,6 +458,8 @@ namespace Sudoku
             this.Box9J.Name = "Box9J";
             this.Box9J.Size = new System.Drawing.Size(51, 35);
             this.Box9J.TabIndex = 49;
+            this.Box9J.Click += AnyTextBox_Click;
+            this.Box9J.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box9G
             // 
@@ -404,6 +468,8 @@ namespace Sudoku
             this.Box9G.Name = "Box9G";
             this.Box9G.Size = new System.Drawing.Size(51, 35);
             this.Box9G.TabIndex = 48;
+            this.Box9G.Click += AnyTextBox_Click;
+            this.Box9G.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box7H
             // 
@@ -412,6 +478,8 @@ namespace Sudoku
             this.Box7H.Name = "Box7H";
             this.Box7H.Size = new System.Drawing.Size(51, 35);
             this.Box7H.TabIndex = 47;
+            this.Box7H.Click += AnyTextBox_Click;
+            this.Box7H.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box7J
             // 
@@ -420,6 +488,8 @@ namespace Sudoku
             this.Box7J.Name = "Box7J";
             this.Box7J.Size = new System.Drawing.Size(51, 35);
             this.Box7J.TabIndex = 46;
+            this.Box7J.Click += AnyTextBox_Click;
+            this.Box7J.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box7G
             // 
@@ -428,6 +498,8 @@ namespace Sudoku
             this.Box7G.Name = "Box7G";
             this.Box7G.Size = new System.Drawing.Size(51, 35);
             this.Box7G.TabIndex = 45;
+            this.Box7G.Click += AnyTextBox_Click;
+            this.Box7G.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box8E
             // 
@@ -436,6 +508,8 @@ namespace Sudoku
             this.Box8E.Name = "Box8E";
             this.Box8E.Size = new System.Drawing.Size(51, 35);
             this.Box8E.TabIndex = 44;
+            this.Box8E.Click += AnyTextBox_Click;
+            this.Box8E.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box8F
             // 
@@ -444,6 +518,8 @@ namespace Sudoku
             this.Box8F.Name = "Box8F";
             this.Box8F.Size = new System.Drawing.Size(51, 35);
             this.Box8F.TabIndex = 43;
+            this.Box8F.Click += AnyTextBox_Click;
+            this.Box8F.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box8D
             // 
@@ -452,6 +528,8 @@ namespace Sudoku
             this.Box8D.Name = "Box8D";
             this.Box8D.Size = new System.Drawing.Size(51, 35);
             this.Box8D.TabIndex = 42;
+            this.Box8D.Click += AnyTextBox_Click;
+            this.Box8D.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box9E
             // 
@@ -460,6 +538,8 @@ namespace Sudoku
             this.Box9E.Name = "Box9E";
             this.Box9E.Size = new System.Drawing.Size(51, 35);
             this.Box9E.TabIndex = 41;
+            this.Box9E.Click += AnyTextBox_Click;
+            this.Box9E.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box9F
             // 
@@ -468,6 +548,8 @@ namespace Sudoku
             this.Box9F.Name = "Box9F";
             this.Box9F.Size = new System.Drawing.Size(51, 35);
             this.Box9F.TabIndex = 40;
+            this.Box9F.Click += AnyTextBox_Click;
+            this.Box9F.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box9D
             // 
@@ -476,6 +558,8 @@ namespace Sudoku
             this.Box9D.Name = "Box9D";
             this.Box9D.Size = new System.Drawing.Size(51, 35);
             this.Box9D.TabIndex = 39;
+            this.Box9D.Click += AnyTextBox_Click;
+            this.Box9D.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box7E
             // 
@@ -484,6 +568,8 @@ namespace Sudoku
             this.Box7E.Name = "Box7E";
             this.Box7E.Size = new System.Drawing.Size(51, 35);
             this.Box7E.TabIndex = 38;
+            this.Box7E.Click += AnyTextBox_Click;
+            this.Box7E.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box7F
             // 
@@ -492,6 +578,8 @@ namespace Sudoku
             this.Box7F.Name = "Box7F";
             this.Box7F.Size = new System.Drawing.Size(51, 35);
             this.Box7F.TabIndex = 37;
+            this.Box7F.Click += AnyTextBox_Click;
+            this.Box7F.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box7D
             // 
@@ -500,6 +588,8 @@ namespace Sudoku
             this.Box7D.Name = "Box7D";
             this.Box7D.Size = new System.Drawing.Size(51, 35);
             this.Box7D.TabIndex = 36;
+            this.Box7D.Click += AnyTextBox_Click;
+            this.Box7D.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box8B
             // 
@@ -508,6 +598,8 @@ namespace Sudoku
             this.Box8B.Name = "Box8B";
             this.Box8B.Size = new System.Drawing.Size(51, 35);
             this.Box8B.TabIndex = 35;
+            this.Box8B.Click += AnyTextBox_Click;
+            this.Box8B.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box8C
             // 
@@ -516,6 +608,8 @@ namespace Sudoku
             this.Box8C.Name = "Box8C";
             this.Box8C.Size = new System.Drawing.Size(51, 35);
             this.Box8C.TabIndex = 34;
+            this.Box8C.Click += AnyTextBox_Click;
+            this.Box8C.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box8A
             // 
@@ -524,6 +618,8 @@ namespace Sudoku
             this.Box8A.Name = "Box8A";
             this.Box8A.Size = new System.Drawing.Size(51, 35);
             this.Box8A.TabIndex = 33;
+            this.Box8A.Click += AnyTextBox_Click;
+            this.Box8A.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box9B
             // 
@@ -532,6 +628,8 @@ namespace Sudoku
             this.Box9B.Name = "Box9B";
             this.Box9B.Size = new System.Drawing.Size(51, 35);
             this.Box9B.TabIndex = 32;
+            this.Box9B.Click += AnyTextBox_Click;
+            this.Box9B.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box9C
             // 
@@ -540,6 +638,8 @@ namespace Sudoku
             this.Box9C.Name = "Box9C";
             this.Box9C.Size = new System.Drawing.Size(51, 35);
             this.Box9C.TabIndex = 31;
+            this.Box9C.Click += AnyTextBox_Click;
+            this.Box9C.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box9A
             // 
@@ -548,6 +648,8 @@ namespace Sudoku
             this.Box9A.Name = "Box9A";
             this.Box9A.Size = new System.Drawing.Size(51, 35);
             this.Box9A.TabIndex = 30;
+            this.Box9A.Click += AnyTextBox_Click;
+            this.Box9A.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box7B
             // 
@@ -556,6 +658,8 @@ namespace Sudoku
             this.Box7B.Name = "Box7B";
             this.Box7B.Size = new System.Drawing.Size(51, 35);
             this.Box7B.TabIndex = 29;
+            this.Box7B.Click += AnyTextBox_Click;
+            this.Box7B.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box7C
             // 
@@ -564,6 +668,8 @@ namespace Sudoku
             this.Box7C.Name = "Box7C";
             this.Box7C.Size = new System.Drawing.Size(51, 35);
             this.Box7C.TabIndex = 28;
+            this.Box7C.Click += AnyTextBox_Click;
+            this.Box7C.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box7A
             // 
@@ -572,6 +678,8 @@ namespace Sudoku
             this.Box7A.Name = "Box7A";
             this.Box7A.Size = new System.Drawing.Size(51, 35);
             this.Box7A.TabIndex = 27;
+            this.Box7A.Click += AnyTextBox_Click;
+            this.Box7A.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box5H
             // 
@@ -580,6 +688,8 @@ namespace Sudoku
             this.Box5H.Name = "Box5H";
             this.Box5H.Size = new System.Drawing.Size(51, 35);
             this.Box5H.TabIndex = 80;
+            this.Box5H.Click += AnyTextBox_Click;
+            this.Box5H.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box5J
             // 
@@ -588,6 +698,8 @@ namespace Sudoku
             this.Box5J.Name = "Box5J";
             this.Box5J.Size = new System.Drawing.Size(51, 35);
             this.Box5J.TabIndex = 79;
+            this.Box5J.Click += AnyTextBox_Click;
+            this.Box5J.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box5G
             // 
@@ -596,6 +708,8 @@ namespace Sudoku
             this.Box5G.Name = "Box5G";
             this.Box5G.Size = new System.Drawing.Size(51, 35);
             this.Box5G.TabIndex = 78;
+            this.Box5G.Click += AnyTextBox_Click;
+            this.Box5G.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box6H
             // 
@@ -604,6 +718,8 @@ namespace Sudoku
             this.Box6H.Name = "Box6H";
             this.Box6H.Size = new System.Drawing.Size(51, 35);
             this.Box6H.TabIndex = 77;
+            this.Box6H.Click += AnyTextBox_Click;
+            this.Box6H.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box6J
             // 
@@ -612,6 +728,8 @@ namespace Sudoku
             this.Box6J.Name = "Box6J";
             this.Box6J.Size = new System.Drawing.Size(51, 35);
             this.Box6J.TabIndex = 76;
+            this.Box6J.Click += AnyTextBox_Click;
+            this.Box6J.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box6G
             // 
@@ -620,6 +738,8 @@ namespace Sudoku
             this.Box6G.Name = "Box6G";
             this.Box6G.Size = new System.Drawing.Size(51, 35);
             this.Box6G.TabIndex = 75;
+            this.Box6G.Click += AnyTextBox_Click;
+            this.Box6G.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box4H
             // 
@@ -628,6 +748,8 @@ namespace Sudoku
             this.Box4H.Name = "Box4H";
             this.Box4H.Size = new System.Drawing.Size(51, 35);
             this.Box4H.TabIndex = 74;
+            this.Box4H.Click += AnyTextBox_Click;
+            this.Box4H.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box4J
             // 
@@ -636,6 +758,8 @@ namespace Sudoku
             this.Box4J.Name = "Box4J";
             this.Box4J.Size = new System.Drawing.Size(51, 35);
             this.Box4J.TabIndex = 73;
+            this.Box4J.Click += AnyTextBox_Click;
+            this.Box4J.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box4G
             // 
@@ -644,6 +768,8 @@ namespace Sudoku
             this.Box4G.Name = "Box4G";
             this.Box4G.Size = new System.Drawing.Size(51, 35);
             this.Box4G.TabIndex = 72;
+            this.Box4G.Click += AnyTextBox_Click;
+            this.Box4G.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box5E
             // 
@@ -652,14 +778,18 @@ namespace Sudoku
             this.Box5E.Name = "Box5E";
             this.Box5E.Size = new System.Drawing.Size(51, 35);
             this.Box5E.TabIndex = 71;
+            this.Box5E.Click += AnyTextBox_Click;
+            this.Box5E.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box5F
-            // 
+            //
             this.Box5F.Location = new System.Drawing.Point(1612, 526);
             this.Box5F.Margin = new System.Windows.Forms.Padding(7);
             this.Box5F.Name = "Box5F";
             this.Box5F.Size = new System.Drawing.Size(51, 35);
             this.Box5F.TabIndex = 70;
+            this.Box5F.Click += AnyTextBox_Click;
+            this.Box5F.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box5D
             // 
@@ -668,6 +798,8 @@ namespace Sudoku
             this.Box5D.Name = "Box5D";
             this.Box5D.Size = new System.Drawing.Size(51, 35);
             this.Box5D.TabIndex = 69;
+            this.Box5D.Click += AnyTextBox_Click;
+            this.Box5D.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box6E
             // 
@@ -676,6 +808,8 @@ namespace Sudoku
             this.Box6E.Name = "Box6E";
             this.Box6E.Size = new System.Drawing.Size(51, 35);
             this.Box6E.TabIndex = 68;
+            this.Box6E.Click += AnyTextBox_Click;
+            this.Box6E.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box6F
             // 
@@ -684,6 +818,8 @@ namespace Sudoku
             this.Box6F.Name = "Box6F";
             this.Box6F.Size = new System.Drawing.Size(51, 35);
             this.Box6F.TabIndex = 67;
+            this.Box6F.Click += AnyTextBox_Click;
+            this.Box6F.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box6D
             // 
@@ -692,6 +828,8 @@ namespace Sudoku
             this.Box6D.Name = "Box6D";
             this.Box6D.Size = new System.Drawing.Size(51, 35);
             this.Box6D.TabIndex = 66;
+            this.Box6D.Click += AnyTextBox_Click;
+            this.Box6D.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box4E
             // 
@@ -700,6 +838,8 @@ namespace Sudoku
             this.Box4E.Name = "Box4E";
             this.Box4E.Size = new System.Drawing.Size(51, 35);
             this.Box4E.TabIndex = 65;
+            this.Box4E.Click += AnyTextBox_Click;
+            this.Box4E.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box4F
             // 
@@ -708,6 +848,8 @@ namespace Sudoku
             this.Box4F.Name = "Box4F";
             this.Box4F.Size = new System.Drawing.Size(51, 35);
             this.Box4F.TabIndex = 64;
+            this.Box4F.Click += AnyTextBox_Click;
+            this.Box4F.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box4D
             // 
@@ -716,6 +858,8 @@ namespace Sudoku
             this.Box4D.Name = "Box4D";
             this.Box4D.Size = new System.Drawing.Size(51, 35);
             this.Box4D.TabIndex = 63;
+            this.Box4D.Click += AnyTextBox_Click;
+            this.Box4D.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box5B
             // 
@@ -724,6 +868,8 @@ namespace Sudoku
             this.Box5B.Name = "Box5B";
             this.Box5B.Size = new System.Drawing.Size(51, 35);
             this.Box5B.TabIndex = 62;
+            this.Box5B.Click += AnyTextBox_Click;
+            this.Box5B.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box5C
             // 
@@ -732,6 +878,8 @@ namespace Sudoku
             this.Box5C.Name = "Box5C";
             this.Box5C.Size = new System.Drawing.Size(51, 35);
             this.Box5C.TabIndex = 61;
+            this.Box5C.Click += AnyTextBox_Click;
+            this.Box5C.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box5A
             // 
@@ -740,6 +888,8 @@ namespace Sudoku
             this.Box5A.Name = "Box5A";
             this.Box5A.Size = new System.Drawing.Size(51, 35);
             this.Box5A.TabIndex = 60;
+            this.Box5A.Click += AnyTextBox_Click;
+            this.Box5A.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box6B
             // 
@@ -748,6 +898,8 @@ namespace Sudoku
             this.Box6B.Name = "Box6B";
             this.Box6B.Size = new System.Drawing.Size(51, 35);
             this.Box6B.TabIndex = 59;
+            this.Box6B.Click += AnyTextBox_Click;
+            this.Box6B.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box6C
             // 
@@ -756,6 +908,8 @@ namespace Sudoku
             this.Box6C.Name = "Box6C";
             this.Box6C.Size = new System.Drawing.Size(51, 35);
             this.Box6C.TabIndex = 58;
+            this.Box6C.Click += AnyTextBox_Click;
+            this.Box6C.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box6A
             // 
@@ -764,6 +918,8 @@ namespace Sudoku
             this.Box6A.Name = "Box6A";
             this.Box6A.Size = new System.Drawing.Size(51, 35);
             this.Box6A.TabIndex = 57;
+            this.Box6A.Click += AnyTextBox_Click;
+            this.Box6A.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box4B
             // 
@@ -772,6 +928,8 @@ namespace Sudoku
             this.Box4B.Name = "Box4B";
             this.Box4B.Size = new System.Drawing.Size(51, 35);
             this.Box4B.TabIndex = 56;
+            this.Box4B.Click += AnyTextBox_Click;
+            this.Box4B.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box4C
             // 
@@ -780,6 +938,8 @@ namespace Sudoku
             this.Box4C.Name = "Box4C";
             this.Box4C.Size = new System.Drawing.Size(51, 35);
             this.Box4C.TabIndex = 55;
+            this.Box4C.Click += AnyTextBox_Click;
+            this.Box4C.KeyUp += AnyTextBox_KeyUp;
             // 
             // Box4A
             // 
@@ -788,6 +948,8 @@ namespace Sudoku
             this.Box4A.Name = "Box4A";
             this.Box4A.Size = new System.Drawing.Size(51, 35);
             this.Box4A.TabIndex = 54;
+            this.Box4A.Click += AnyTextBox_Click;
+            this.Box4A.KeyUp += AnyTextBox_KeyUp;
             // 
             // label1
             // 
