@@ -6,11 +6,11 @@ using System.Windows.Forms;
 
 /************************************************************
  *                                                          *
- *  CSCI 473/504           Assignment 5         Fall 2018   *                                             
+ *  CSCI 473/504           Assignment 5         Fall 2018   *
  *                                                          *
  *  Programmers: Tyler Saballus                             *
  *                                                          *
- *  Date Due:   Nov-15 (Turned in one day late)             *                          
+ *  Date Due:   Nov-15 (Turned in one day late)             *
  *                                                          *
  *  Purpose:    This is a Sudoku app that allows users to   *
  *              play the popular Sudoku game.               *
@@ -49,7 +49,14 @@ namespace Sudoku
             get { return Puzzle.CalculateDifficultyAverage(hardPuzzles); }
         }
 
-
+        /*******************************************************
+        * PopulateDiffComboBox function
+        *
+        * Arguments: (0):
+        *
+        * Return Type: void
+        * Use Case: Populates Combo Box with selection items
+        ******************************************************/
         private void PopulateDiffComboBox()
         {
             foreach (string d in difficulties)
@@ -58,6 +65,14 @@ namespace Sudoku
             }
         }
 
+        /*******************************************************
+        * PopulateGrid function
+        *
+        * Arguments: (0):
+        *
+        * Return Type: void
+        * Use Case: Populates a 9x9 grid of TextBoxes
+        ******************************************************/
         private void PopulateGrid()
         {
             PuzzleBoxes = new TextBox[9, 9]
@@ -79,6 +94,6 @@ namespace Sudoku
                 tb.TextAlign = HorizontalAlignment.Center;
             }
         } // end PopulateGrid function
- 
+
     } // end Sudoku partial class
 } // end Sudoku namespace

@@ -9,11 +9,11 @@ using System.Windows.Forms;
 
 /************************************************************
  *                                                          *
- *  CSCI 473/504           Assignment 5         Fall 2018   *                                             
+ *  CSCI 473/504           Assignment 5         Fall 2018   *
  *                                                          *
  *  Programmers: Tyler Saballus                             *
  *                                                          *
- *  Date Due:   Nov-15 (Turned in one day late)             *                          
+ *  Date Due:   Nov-15 (Turned in one day late)             *
  *                                                          *
  *  Purpose:    This is a Sudoku app that allows users to   *
  *              play the popular Sudoku game.               *
@@ -33,6 +33,14 @@ namespace Sudoku
             PopulateGrid();
         }
 
+        /*******************************************************
+        * InitFrameSize function
+        *
+        * Arguments: (0):
+        *
+        * Return Type: void
+        * Use Case: Initializes frame size to 65% of user's window
+        ******************************************************/
         private void InitFrameSize()
         {
             int h = (int) (Screen.PrimaryScreen.WorkingArea.Height * 0.65);
@@ -40,6 +48,16 @@ namespace Sudoku
             Size = new Size(w, h);
         }
 
+        /*******************************************************
+        * BuildPuzzleList function
+        *
+        * Arguments: (2):
+        *   1. puzzleList - a list of puzzles to be populated
+        *   2. source - base filepath to create puzzles
+        *
+        * Return Type: void
+        * Use Case: Initializes frame size to 65% of user's window
+        ******************************************************/
         private void BuildPuzzleList(List<Puzzle> puzzleList, string source)
         {
             Puzzle p;
@@ -52,6 +70,14 @@ namespace Sudoku
             }
         }
 
+        /*******************************************************
+        * InitPuzzleLists function
+        *
+        * Arguments: (0):
+        *
+        * Return Type: void
+        * Use Case: Initializes our three lists of puzzles
+        ******************************************************/
         private void InitPuzzleLists()
         {
             string easySrc = "../../Properties/Resources/puzzles/easy/e",
@@ -62,14 +88,5 @@ namespace Sudoku
             BuildPuzzleList(mediumPuzzles, mediumSrc);
             BuildPuzzleList(hardPuzzles, hardSrc);
         }
-
-        private void InitGrid()
-        {
-            Puzzle p = easyPuzzles[0];
-            SelectedPuzzle = p;
-            FillGrid();
-        }
-
-
-    }
-}
+    } // end SudokuApp class
+} // end Sudoku namespace
