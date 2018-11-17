@@ -5,7 +5,7 @@ Goals:
 2. From a selection of varying difficulties... ✅
 3. The ability for us to save our current progress, to be resumed later... ✅
 4. With a mechanism to track our progress with solving puzzles within a single difficulty... ✅
-5. A button to "cheat" or "help" with finding the solution... ❌
+5. A button to "cheat" or "help" with finding the solution... ✅
 6. Another button to verify the correctness (or lack thereof) of our current solution... ✅
 7. A "pause" button... ✅
 8. And of course, as with most things, a reset button.  ✅
