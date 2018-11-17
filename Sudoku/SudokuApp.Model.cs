@@ -60,29 +60,6 @@ namespace Sudoku
                 { Box9A, Box9B, Box9C, Box9D, Box9E, Box9F, Box9G, Box9H, Box9J }
             };
         }
-
-        // "../../Properties/Resources/puzzles/easy/e1.txt"
-        private void BuildPuzzleList(List<Puzzle> puzzleList, string source)
-        {
-            Puzzle p;
-            string filePath;
-            for (int i = 1; i < 5; i++)
-            {
-                filePath = source + i + ".txt";
-                p = new Puzzle(filePath);
-                puzzleList.Add(p);
-            }
-        }
-
-        private void InitPuzzleLists()
-        {
-            string easySrc = "../../Properties/Resources/puzzles/easy/e",
-                   mediumSrc = "../../Properties/Resources/puzzles/medium/m",
-                   hardSrc = "../../Properties/Resources/puzzles/hard/h";
-
-            BuildPuzzleList(easyPuzzles, easySrc);
-            BuildPuzzleList(mediumPuzzles, mediumSrc);
-            BuildPuzzleList(hardPuzzles, hardSrc);
-        }
+ 
     } // end Sudoku partial class
 } // end Sudoku namespace

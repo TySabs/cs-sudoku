@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -10,14 +11,12 @@ namespace Sudoku
     {
         /**********************************************************************************
         * 
-        *  Form Functions
+        *  Form Event Functions
         * 
         * *********************************************************************************/
         private void DifficultyBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Save old selected puzzle
-           SelectedPuzzle.SetSaveState(PuzzleBoxes);
-
             List<Puzzle> selectedList;
             switch (DifficultyBox.SelectedItem)
             {
@@ -40,8 +39,8 @@ namespace Sudoku
             {
                 if (!p.IsCompleted)
                 {
-                    FillGrid(p);
                     SelectedPuzzle = p;
+                    FillGrid();
                     break;
                 }
                 puzzleCounter++;
@@ -52,6 +51,39 @@ namespace Sudoku
 
         } // end DifficultyBox_SelectedIndexChanged function
 
+        private void AnyTextBox_Click(object sender, EventArgs e)
+        {
+            TextBox currentBox = sender as TextBox;
+            currentBox.BackColor = Color.White;
+            currentBox.ForeColor = Color.Black;
+        }
+
+        private void AnyTextBox_KeyUp(object sender, EventArgs e)
+        {
+            TextBox currentBox = sender as TextBox;
+            int result;
+            if (Int32.TryParse(currentBox.Text, out result))
+            {
+                if (result < 0 || result > 9)
+                {
+                    currentBox.Text = "0";
+                    currentBox.SelectionStart = currentBox.Text.Length;
+                }
+            }
+            else
+            {
+                currentBox.Text = "0";
+                currentBox.SelectionStart = currentBox.Text.Length;
+            }
+
+            if (currentBox.Text.Length > 1)
+            {
+                currentBox.Text = currentBox.Text.TrimStart('0');
+            }
+
+            currentBox.BackColor = Color.White;
+            currentBox.ForeColor = Color.Black;
+        }
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
@@ -62,7 +94,12 @@ namespace Sudoku
         private void ResetButton_Click(object sender, EventArgs e)
         {
             SelectedPuzzle.IsSaved = false;
-            FillGrid(SelectedPuzzle);
+            FillGrid();
+        }
+
+        private void CheckSolutionButton_Click(object sender, EventArgs e)
+        {
+            CheckSolution();
         }
 
         /**********************************************************************************
@@ -70,27 +107,56 @@ namespace Sudoku
          *  Helper Functions
          * 
          * *********************************************************************************/
-        private void FillGrid(Puzzle selectedPuzzle)
+        private void FillGrid()
         {
             for (int i = 0; i < 9; i++)
             {
-                if (selectedPuzzle.IsSaved)
+                if (SelectedPuzzle.IsSaved)
                 {
                     for (int j = 0; j < 9; j++)
                     {
-                        PuzzleBoxes[i, j].Text = selectedPuzzle.SavedState[i, j].ToString();
+                        PuzzleBoxes[i, j].Text = SelectedPuzzle.SavedState[i, j].ToString();
+                        PuzzleBoxes[i, j].BackColor = Color.White;
+                        PuzzleBoxes[i, j].ForeColor = Color.Black;
                     }
                 }
                 else
                 {
                     for (int j = 0; j < 9; j++)
                     {
-                        PuzzleBoxes[i, j].Text = selectedPuzzle.InitialState[i, j].ToString();
+                        PuzzleBoxes[i, j].Text = SelectedPuzzle.InitialState[i, j].ToString();
+                        PuzzleBoxes[i, j].BackColor = Color.White;
+                        PuzzleBoxes[i, j].ForeColor = Color.Black;
                     }
                 }
 
             }
         } // end FillGrid function
+
+        private bool CheckSolution()
+        {
+            int numCorrect = 0;
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    if (PuzzleBoxes[i, j].Text == SelectedPuzzle.SolutionState[i, j].ToString())
+                    {
+                        PuzzleBoxes[i, j].BackColor = Color.Green;
+                        PuzzleBoxes[i, j].ForeColor = Color.White;
+                        numCorrect++;
+                    }
+                    else
+                    {
+                        PuzzleBoxes[i, j].BackColor = Color.Red;
+                        PuzzleBoxes[i, j].ForeColor = Color.White;
+                    }
+                }
+            }
+
+            bool solveCheck = numCorrect == 81;
+            return solveCheck;
+        }
 
     } // end SodukoApp.Controller class
 } // end Sudoku namespace

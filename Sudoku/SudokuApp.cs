@@ -17,13 +17,8 @@ namespace Sudoku
             PopulateDiffComboBox();
             InitFrameSize();
             CenterToScreen();
-            PopulateGrid();
             InitPuzzleLists();
-
-            Puzzle p = easyPuzzles[0];
-            FillGrid(p);
-            SelectedPuzzle = p;
-
+            InitGrid();
         }
 
         private void InitFrameSize()
@@ -33,5 +28,35 @@ namespace Sudoku
             Size = new Size(w, h);
         }
 
+        private void BuildPuzzleList(List<Puzzle> puzzleList, string source)
+        {
+            Puzzle p;
+            string filePath;
+            for (int i = 1; i < 5; i++)
+            {
+                filePath = source + i + ".txt";
+                p = new Puzzle(filePath);
+                puzzleList.Add(p);
+            }
+        }
+
+        private void InitPuzzleLists()
+        {
+            string easySrc = "../../Properties/Resources/puzzles/easy/e",
+                   mediumSrc = "../../Properties/Resources/puzzles/medium/m",
+                   hardSrc = "../../Properties/Resources/puzzles/hard/h";
+
+            BuildPuzzleList(easyPuzzles, easySrc);
+            BuildPuzzleList(mediumPuzzles, mediumSrc);
+            BuildPuzzleList(hardPuzzles, hardSrc);
+        }
+
+        private void InitGrid()
+        {
+            PopulateGrid();
+            Puzzle p = easyPuzzles[0];
+            SelectedPuzzle = p;
+            FillGrid();
+        }
     }
 }
