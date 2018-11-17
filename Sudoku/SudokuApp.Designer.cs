@@ -949,8 +949,7 @@ namespace Sudoku
             this.Box4A.Size = new System.Drawing.Size(51, 35);
             this.Box4A.TabIndex = 54;
             this.Box4A.Click += AnyTextBox_Click;
-            this.Box4A.KeyUp += AnyTextBox_KeyUp;
-            // 
+            this.Box4A.KeyUp += AnyTextBox_KeyUp;            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -1045,6 +1044,7 @@ namespace Sudoku
             this.HelpButton.TabIndex = 90;
             this.HelpButton.Text = "Help";
             this.HelpButton.UseVisualStyleBackColor = true;
+            this.HelpButton.Click += new System.EventHandler(this.HelpButton_Click);
             // 
             // CheckSolutionButton
             // 

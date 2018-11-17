@@ -7,11 +7,11 @@ using System.Windows.Forms;
 
 /************************************************************
  *                                                          *
- *  CSCI 473/504           Assignment 5         Fall 2018   *                                             
+ *  CSCI 473/504           Assignment 5         Fall 2018   *
  *                                                          *
  *  Programmers: Tyler Saballus                             *
  *                                                          *
- *  Date Due:   Nov-15 (Turned in one day late)             *                          
+ *  Date Due:   Nov-15 (Turned in one day late)             *
  *                                                          *
  *  Purpose:    This is a Sudoku app that allows users to   *
  *              play the popular Sudoku game.               *
@@ -24,18 +24,26 @@ namespace Sudoku
         public bool IsSolved { get; set; }
         public bool IsCompleted { get; set; }
         public bool IsSaved { get; set; }
+        public bool IsCheating { get; set; }
         public int Timer { get; set; }
         public int RecordTime { get; set; }
         public char[,] InitialState;
         public char[,] SolutionState;
         public char[,] SavedState;
 
-        // Constructor
+
+
+        /*******************************************************
+        * Puzzle constructor
+        *
+        * Arguments: (1): filePath - path to a source file
+        ******************************************************/
         public Puzzle(string filePath)
         {
             IsSolved = false;
             IsCompleted = false;
             IsSaved = false;
+            IsCheating = false;
 
             Timer = 0;
             RecordTime = 0;
@@ -68,7 +76,16 @@ namespace Sudoku
                 } // end outer for-loop
             }
         } // end Constructor
-        
+
+
+        /*******************************************************
+        * Puzzle.CalculateDifficultyAverage method
+        *
+        * Arguments: (1): puzzlePool - A list of puzzles
+        *
+        * Return Type: TimeSpan - the average difficulty for this pool
+        * Use Case: Calculates the average record time for a difficulty
+        ******************************************************/
         public static TimeSpan CalculateDifficultyAverage(List<Puzzle> puzzlePool)
         {
             int total, sum, i;
@@ -92,19 +109,15 @@ namespace Sudoku
 
         } // end Puzzle.CalculateDifficultyAverage method
 
-        public void PrintPuzzleState(char[,] state)
-        {
-            for (int i = 0; i < 9; i++)
-            {
-                for (int j = 0; j < 9; j++)
-                {
-                    Console.Write(state[i, j]);
-                }
 
-                Console.WriteLine();
-            }
-        }
-
+        /*******************************************************
+        * Puzzle.SetSaveState method
+        *
+        * Arguments: (1): currentState - Current State of the TextBox grid
+        *
+        * Return Type: void
+        * Use Case: Sets this puzzle's SavedState
+        ******************************************************/
         public void SetSaveState(TextBox[,] currentState)
         {
             IsSaved = true;
