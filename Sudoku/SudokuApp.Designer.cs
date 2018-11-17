@@ -1225,7 +1225,7 @@ namespace Sudoku
             this.Controls.Add(this.Box1A);
             this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "SudokuApp";
-            this.Text = "Sudoku - Josh Ruge / Tyler Saballus";
+            this.Text = "Sudoku - Tyler Saballus";
             this.ResumeLayout(false);
             this.PerformLayout();
 
