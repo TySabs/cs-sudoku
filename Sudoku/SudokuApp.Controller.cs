@@ -18,19 +18,23 @@ namespace Sudoku
         {
             // Save old selected puzzle
             List<Puzzle> selectedList;
+            string averageSolutionTime;
             switch (DifficultyBox.SelectedItem)
             {
                 case "Easy":
                     selectedList = easyPuzzles;
+                    averageSolutionTime = EasyAverage.ToString("T");
                     break;
                 case "Medium":
                     selectedList = mediumPuzzles;
+                    averageSolutionTime = MediumAverage.ToString("T");
                     break;
                 case "Hard":
                     selectedList = hardPuzzles;
+                    averageSolutionTime = HardAverage.ToString("T");
                     break;
                 default:
-                    displayLabel.Text = "Combo Box Error!";
+                    DifficultyLabel.Text = "Combo Box Error!";
                     return;
             }
 
@@ -48,7 +52,12 @@ namespace Sudoku
 
 
             PuzzleTimer.Enabled = true;
-            displayLabel.Text = DifficultyBox.SelectedItem + " Difficulty - Puzzle Number: " + puzzleCounter;
+
+            StringBuilder sb = new StringBuilder();
+            sb.Append(DifficultyBox.SelectedItem + " Difficulty - ");
+            sb.Append("Puzzle Number: " + puzzleCounter);
+            DifficultyLabel.Text = sb.ToString();
+            AvgLabel.Text = "Average Solution Time: " + averageSolutionTime;
 
         } // end DifficultyBox_SelectedIndexChanged function
 

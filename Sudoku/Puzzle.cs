@@ -57,7 +57,7 @@ namespace Sudoku
             }
         } // end Constructor
         
-        public static double CalculateDifficultyAverage(List<Puzzle> puzzlePool)
+        public static TimeSpan CalculateDifficultyAverage(List<Puzzle> puzzlePool)
         {
             int total, sum;
             for (total = 0, sum = 0; total < puzzlePool.Count; total++)
@@ -65,7 +65,7 @@ namespace Sudoku
                 sum += puzzlePool[total].RecordTime;
             }
 
-            return sum / total;
+            return TimeSpan.FromSeconds(sum / total);
         }
 
         public void PrintPuzzleState(char[,] state)

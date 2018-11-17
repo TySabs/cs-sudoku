@@ -21,17 +21,17 @@ namespace Sudoku
 
         public static TextBox[,] PuzzleBoxes = new TextBox[9,9];
 
-        public double EasyAverage
+        public TimeSpan EasyAverage
         {
             get { return Puzzle.CalculateDifficultyAverage(easyPuzzles); }
         }
 
-        public double MediumAverage
+        public TimeSpan MediumAverage
         {
             get { return Puzzle.CalculateDifficultyAverage(mediumPuzzles); }
         }
 
-        public double HardAverage
+        public TimeSpan HardAverage
         {
             get { return Puzzle.CalculateDifficultyAverage(hardPuzzles); }
         }
@@ -59,7 +59,13 @@ namespace Sudoku
                 { Box8A, Box8B, Box8C, Box8D, Box8E, Box8F, Box8G, Box8H, Box8J },
                 { Box9A, Box9B, Box9C, Box9D, Box9E, Box9F, Box9G, Box9H, Box9J }
             };
-        }
+
+            // Form designer was erasing events when I tried to center in there, so initialize boxes to center here
+            foreach (TextBox tb in PuzzleBoxes)
+            {
+                tb.TextAlign = HorizontalAlignment.Center;
+            }
+        } // end PopulateGrid function
  
     } // end Sudoku partial class
 } // end Sudoku namespace
