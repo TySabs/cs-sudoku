@@ -47,6 +47,7 @@ namespace Sudoku
             }
 
 
+            PuzzleTimer.Enabled = true;
             displayLabel.Text = DifficultyBox.SelectedItem + " Difficulty - Puzzle Number: " + puzzleCounter;
 
         } // end DifficultyBox_SelectedIndexChanged function
@@ -83,7 +84,7 @@ namespace Sudoku
 
             currentBox.BackColor = Color.White;
             currentBox.ForeColor = Color.Black;
-        }
+        } // end AnyTextBox_KeyUp function
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
@@ -102,11 +103,31 @@ namespace Sudoku
             CheckSolution();
         }
 
+        private void PauseButton_Click(object sender, EventArgs e)
+        {
+            PuzzleTimer.Enabled = !PuzzleTimer.Enabled;
+
+            if (PuzzleTimer.Enabled) {
+                FillGrid();
+            }
+            else
+            {
+                EmptyGrid();
+            }
+        }
+
+        private void PuzzleTimer_Tick(object sender, EventArgs e)
+        {
+            TimeSpan timeElapsed = TimeSpan.FromSeconds(SelectedPuzzle.Timer);
+            TimerLabel.Text = timeElapsed.ToString("T");
+            SelectedPuzzle.Timer++;
+        }
+
         /**********************************************************************************
-         * 
-         *  Helper Functions
-         * 
-         * *********************************************************************************/
+        * 
+        *  Helper Functions
+        * 
+        * *********************************************************************************/
         private void FillGrid()
         {
             for (int i = 0; i < 9; i++)
@@ -133,6 +154,17 @@ namespace Sudoku
             }
         } // end FillGrid function
 
+        private void EmptyGrid()
+        {
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    PuzzleBoxes[i, j].Text = "";
+                }
+            }
+        }
+
         private bool CheckSolution()
         {
             int numCorrect = 0;
@@ -151,12 +183,12 @@ namespace Sudoku
                         PuzzleBoxes[i, j].BackColor = Color.Red;
                         PuzzleBoxes[i, j].ForeColor = Color.White;
                     }
-                }
-            }
+                } // end inner for-loop
+            } // end outer for-loop
 
             bool solveCheck = numCorrect == 81;
             return solveCheck;
-        }
+        } // end CheckSolution function
 
     } // end SodukoApp.Controller class
 } // end Sudoku namespace
